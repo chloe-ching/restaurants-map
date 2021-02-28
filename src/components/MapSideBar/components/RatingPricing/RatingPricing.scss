@@ -1,0 +1,28 @@
+@import 'styles/_variables.scss';
+
+.rating-pricing {
+  padding: 5px $map-side-bar-item-padding-horizontal;
+
+  display: flex;
+
+  &:hover {
+    background-color: inherit;
+  }
+
+  &__item {
+    margin: 0 20px;
+    font-size: 12px;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__star-icon {
+    color: #b6b600;
+  }
+
+  &__pricing-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+}

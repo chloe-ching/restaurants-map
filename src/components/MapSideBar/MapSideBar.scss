@@ -1,0 +1,76 @@
+@import 'styles/_variables.scss';
+
+.map-side-bar {
+  $block: &;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: $map-side-bar-width;
+  height: 100%;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 30%);
+  background-color: white;
+
+  &__loading-row {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  &__loading-icon {
+    font-size: 20px;
+    color: grey;
+  }
+
+  &__list-header {
+    border-bottom: solid 1px #d1d1d1;
+    padding: 10px;
+
+    display: flex;
+  }
+
+  &__list-item {
+    background: white;
+    border-bottom: solid 1px #eaeaea;
+
+    &:hover, &--focused {
+      background: darken(white, 10);
+    }
+
+    &--focused {
+      #{$block}__list-item-name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__list-item-name-row {
+    padding: $map-side-bar-item-padding-vertical $map-side-bar-item-padding-horizontal;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    .rating-pricing {
+      display: block;
+      padding: 0;
+
+      &__item {
+        margin: 0 0 0 10px;
+
+        :not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &__list-item-name {
+    flex: 1;
+  }
+
+  .dropdown {
+    width: 90px;
+  }
+}

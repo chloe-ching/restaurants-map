@@ -1,0 +1,7 @@
+@import 'styles/_variables.scss';
+
+.map-view {
+  position: relative;
+  height: 100vh;
+  padding-left: $map-side-bar-width;
+}

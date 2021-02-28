@@ -1,0 +1,12 @@
+$restaurant-marker-size: 18px;
+$restaurant-marker-focused-size: 25px;
+
+.map {
+  height: 100%;
+  width: 100%;
+
+  &__restaurant-marker {
+    color: #d14545;
+    transform: translate(-50%, -50%);
+  }
+}

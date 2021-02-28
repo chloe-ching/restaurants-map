@@ -1,0 +1,50 @@
+@import 'styles/_variables';
+
+$button-height: 22px;
+$button-padding: 5px;
+
+.dropdown {
+  position: relative;
+  border: solid 1px #2bb9c7;
+  border-radius: $button-border-radius;
+  height: $button-height;
+  padding: $button-padding;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__control {
+    width: 100%;
+
+    display: flex;
+  }
+
+  &__placeholder {
+    flex: 1;
+  }
+
+  &__menu {
+    position: absolute;
+    top: $button-height + $button-padding * 2;
+    border: solid 1px #b0b0b0;
+    border-radius: $button-border-radius;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &__icon {
+    margin-left: 5px;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+  }
+
+  .Dropdown-option {
+    padding: 2px 5px;
+    background-color: white;
+  }
+}
